@@ -1,11 +1,5 @@
-##### BLOCK ADOBE GENUINE HOSTS #####
-# These IPs will only block the licensing part of Adobe apps,
-# and shouldn't interfere with any other network option,
-# such as AI generation, downloads, etc.
-# 0.0.0.0 can be found in https://adobe.isdumb.one/list.txt
-# Unlicensed window? Report at:
-# https://github.com/ignaciocastro/adobe-is-dumb/issues
-# Last update: 2023-11-21 20:51 UTC
+##### BLOCK ADOBE GENUINE HOSTS WITH LOGIN ACCESS #####
+
 
 0.0.0.0 ardownload.adobe.com
 0.0.0.0 armmf.adobe.com
@@ -52,5 +46,6 @@
 0.0.0.0 6j0onv1tde.adobestats.io
 0.0.0.0 ffs3xik41x.adobestats.io
 0.0.0.0 8ncdzpmmrg.adobe.io
+0.0.0.0 3odrrlydxt.adobestats.io
 
 #####################################
