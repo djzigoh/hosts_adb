@@ -1,0 +1,1 @@
+Remove-NetFirewallRule -DisplayName ADOBE_BLOCK:*
