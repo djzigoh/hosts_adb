@@ -12,6 +12,8 @@
 0.0.0.0 lcs-cops-stage.adobe.io
 0.0.0.0 lcs-cops-stage-uw2.adobe.io
 
+0.0.0.0 ic.adobe.io
+0.0.0.0 cc-api-data.adobe.io
 0.0.0.0 prod.adobegenuine.com
 0.0.0.0 gocart-web-prod-ue1-alb-1461435473.us-east-1.elb.amazonaws.com
 0.0.0.0 dyzt55url8.adobe.io
@@ -145,4 +147,6 @@
 0.0.0.0 yshuhythub.adobestats.io
 0.0.0.0 zrbzvc9mel.adobestats.io
 0.0.0.0 rj669kv2lc.adobestats.io
+0.0.0.0 agxqobl83f.adobestats.io
+0.0.0.0 zr60t8ia88.adobestats.io
 #####################################
