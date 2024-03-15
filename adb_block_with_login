@@ -4,6 +4,9 @@
 0.0.0.0 ardownload.adobe.com
 0.0.0.0 armmf.adobe.com
 #
+0.0.0.0 ardownload.adobe.com
+0.0.0.0 armmf.adobe.com
+#
 0.0.0.0 ic.adobe.io
 0.0.0.0 cc-api-data.adobe.io
 0.0.0.0 prod.adobegenuine.com
@@ -141,4 +144,5 @@
 0.0.0.0 rj669kv2lc.adobestats.io
 0.0.0.0 agxqobl83f.adobestats.io
 0.0.0.0 zr60t8ia88.adobestats.io
+0.0.0.0 a1y2b7wsna.adobestats.io
 #####################################
