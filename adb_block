@@ -3,6 +3,14 @@
 0.0.0.0 ardownload.adobe.com
 0.0.0.0 armmf.adobe.com
 #
+0.0.0.0 cc-api-data.adobe.io
+0.0.0.0 lcs-cops.adobe.io
+0.0.0.0 lcs-cops-ue1.adobe.io
+0.0.0.0 lcs-cops-uw2.adobe.io
+0.0.0.0 lcs-cops-prestage.adobe.io
+0.0.0.0 lcs-cops-stage.adobe.io
+0.0.0.0 lcs-cops-stage-uw2.adobe.io
+#
 0.0.0.0 ic.adobe.io
 0.0.0.0 cc-api-data.adobe.io
 0.0.0.0 prod.adobegenuine.com
