@@ -4,6 +4,12 @@
 0.0.0.0 ardownload.adobe.com
 0.0.0.0 armmf.adobe.com
 #
+##### BLOCK ADOBE GENUINE HOSTS WITH LOGIN ACCESS #####
+
+
+0.0.0.0 ardownload.adobe.com
+0.0.0.0 armmf.adobe.com
+#
 0.0.0.0 ic.adobe.io
 0.0.0.0 cc-api-data.adobe.io
 0.0.0.0 prod.adobegenuine.com
@@ -51,7 +57,9 @@
 0.0.0.0 17vpu0xkm6.adobestats.io
 0.0.0.0 1ei1f4k9yk.adobestats.io
 0.0.0.0 1qwiekvkux.adobestats.io
+0.0.0.0 1unk1rv07w.adobestats.io
 0.0.0.0 1xuyy0mk2p.adobestats.io
+0.0.0.0 220zxtbjjl.adobestats.io
 0.0.0.0 2621x1nzeq.adobestats.io
 0.0.0.0 28t4psttw7.adobestats.io
 0.0.0.0 2dhh9vsp39.adobestats.io
@@ -60,8 +68,10 @@
 0.0.0.0 2qjz50z5lf.adobestats.io
 0.0.0.0 31q40256l4.adobestats.io
 0.0.0.0 34u96h6rvn.adobestats.io
+0.0.0.0 3aqshzqv3w.adobestats.io
 0.0.0.0 3odrrlydxt.adobestats.io
 0.0.0.0 3u6k9as4bj.adobestats.io
+0.0.0.0 3uyby7kphu.adobestats.io
 0.0.0.0 3xuuprv9lg.adobestats.io
 0.0.0.0 41yq116gxd.adobestats.io
 0.0.0.0 4dviy9tb3o.adobestats.io
@@ -79,6 +89,7 @@
 0.0.0.0 6y6ozj4sot.adobestats.io
 0.0.0.0 7k1t5im229.adobestats.io
 0.0.0.0 7l4xxjhvkt.adobestats.io
+0.0.0.0 7tu619a87v.adobestats.io
 0.0.0.0 83x20gw5jk.adobestats.io
 0.0.0.0 85n85uoa1h.adobestats.io
 0.0.0.0 8tegcsplp5.adobestats.io
@@ -91,6 +102,7 @@
 0.0.0.0 agxqobl83f.adobestats.io
 0.0.0.0 altz51db7t.adobestats.io
 0.0.0.0 anl33sxvkb.adobestats.io
+0.0.0.0 bbraowhh29.adobestats.io
 0.0.0.0 bk7y1gneyk.adobestats.io
 0.0.0.0 bs2yhuojzm.adobestats.io
 0.0.0.0 c474kdh1ky.adobestats.io
@@ -109,6 +121,7 @@
 0.0.0.0 eyiu19jd5w.adobestats.io
 0.0.0.0 ffs3xik41x.adobestats.io
 0.0.0.0 fm8m3wxufy.adobestats.io
+0.0.0.0 g0rhyhkd7l.adobestats.io
 0.0.0.0 g3y09mbaam.adobestats.io
 0.0.0.0 g9cli80sqp.adobestats.io
 0.0.0.0 hf6s5jdv95.adobestats.io
@@ -117,30 +130,38 @@
 0.0.0.0 hq0mnwz735.adobestats.io
 0.0.0.0 hwfqhlenbg.adobestats.io
 0.0.0.0 i2x2ius9o5.adobestats.io
+0.0.0.0 izke0wrq9n.adobestats.io
 0.0.0.0 j134yk6hv5.adobestats.io
 0.0.0.0 j14y4uzge7.adobestats.io
+0.0.0.0 j5vsm79i8a.adobestats.io
 0.0.0.0 jaircqa037.adobestats.io
 0.0.0.0 jatil41mhk.adobestats.io
 0.0.0.0 je5ufnklzs.adobestats.io
 0.0.0.0 jfb7fqf90c.adobestats.io
 0.0.0.0 jir97hss11.adobestats.io
 0.0.0.0 jmx50quqz0.adobestats.io
+0.0.0.0 jsspeczo2f.adobestats.io
 0.0.0.0 jsxfc5yij1.adobestats.io
 0.0.0.0 jwonv590qs.adobestats.io
 0.0.0.0 jye4987hyr.adobestats.io
 0.0.0.0 k9cyzt2wha.adobestats.io
 0.0.0.0 kgj0gsg3cf.adobestats.io
+0.0.0.0 kjhzwuhcel.adobestats.io
 0.0.0.0 klw4np5a1x.adobestats.io
 0.0.0.0 kvi8uopy6f.adobestats.io
+0.0.0.0 kvn19sesfx.adobestats.io
 0.0.0.0 kwi5n2ruax.adobestats.io
 0.0.0.0 l558s6jwzy.adobestats.io
 0.0.0.0 ll8xjr580v.adobestats.io
 0.0.0.0 llnh72p5m3.adobestats.io
 0.0.0.0 lnwbupw1s7.adobestats.io
+0.0.0.0 ltjlscpozx.adobestats.io
 0.0.0.0 lv5yrjxh6i.adobestats.io
 0.0.0.0 lz2x4rks1u.adobestats.io
 0.0.0.0 m59cps6x3n.adobestats.io
 0.0.0.0 m95pt874uw.adobestats.io
+0.0.0.0 mge8tcrsbr.adobestats.io
+0.0.0.0 mid2473ggd.adobestats.io
 0.0.0.0 mpsige2va9.adobestats.io
 0.0.0.0 n0yaid7q47.adobestats.io
 0.0.0.0 n746qg9j4i.adobestats.io
@@ -169,6 +190,7 @@
 0.0.0.0 rm3xrk61n1.adobestats.io
 0.0.0.0 rmnia8d0tr.adobestats.io
 0.0.0.0 sbzo5r4687.adobestats.io
+0.0.0.0 sfmzkcuf2f.adobestats.io
 0.0.0.0 skg7pqn0al.adobestats.io
 0.0.0.0 t9phy8ywkd.adobestats.io
 0.0.0.0 tcxqcguhww.adobestats.io
@@ -187,6 +209,8 @@
 0.0.0.0 vr25z2lfqx.adobestats.io
 0.0.0.0 vrz9w7o7yv.adobestats.io
 0.0.0.0 wcxqmuxd4z.adobestats.io
+0.0.0.0 wjoxlf5x2z.adobestats.io
+0.0.0.0 wtooadkup9.adobestats.io
 0.0.0.0 wz8kjkd9gc.adobestats.io
 0.0.0.0 x5cupsunjc.adobestats.io
 0.0.0.0 x880ulw3h0.adobestats.io
@@ -194,17 +218,27 @@
 0.0.0.0 xbd20b9wqa.adobestats.io
 0.0.0.0 xesnl0ss94.adobestats.io
 0.0.0.0 xm8abqacqz.adobestats.io
+0.0.0.0 xqh2khegrf.adobestats.io
 0.0.0.0 y2r8jzsv4p.adobestats.io
 0.0.0.0 yb6j6g0r1n.adobestats.io
 0.0.0.0 yj8yx3y8zo.adobestats.io
 0.0.0.0 yri0bsu0ak.adobestats.io
 0.0.0.0 yshuhythub.adobestats.io
 0.0.0.0 yuzuoqo0il.adobestats.io
+0.0.0.0 z2yohmd1jm.adobestats.io
 0.0.0.0 zekdqanici.adobestats.io
 0.0.0.0 zfzx6hae4g.adobestats.io
 0.0.0.0 zmg3v61bbr.adobestats.io
+0.0.0.0 zooyvml70k.adobestats.io
 0.0.0.0 zr60t8ia88.adobestats.io
 0.0.0.0 zrao5tdh1t.adobestats.io
 0.0.0.0 zrbzvc9mel.adobestats.io
 0.0.0.0 zu8yy3jkaz.adobestats.io
+0.0.0.0 4l6gggpz15.adobestats.io
+0.0.0.0 bjooauydoa.adobestats.io
+0.0.0.0 p3m760solq.adobestats.io
+0.0.0.0 c4dpyxapo7.adobestats.io
+0.0.0.0 d2ke1291mx.adobestats.io
+0.0.0.0 no95ceu36c.adobestats.io
+#####################################
 #####################################
