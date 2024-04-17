@@ -4,12 +4,6 @@
 0.0.0.0 ardownload.adobe.com
 0.0.0.0 armmf.adobe.com
 #
-##### BLOCK ADOBE GENUINE HOSTS WITH LOGIN ACCESS #####
-
-
-0.0.0.0 ardownload.adobe.com
-0.0.0.0 armmf.adobe.com
-#
 0.0.0.0 ic.adobe.io
 0.0.0.0 cc-api-data.adobe.io
 0.0.0.0 prod.adobegenuine.com
@@ -240,5 +234,6 @@
 0.0.0.0 c4dpyxapo7.adobestats.io
 0.0.0.0 d2ke1291mx.adobestats.io
 0.0.0.0 no95ceu36c.adobestats.io
-#####################################
+0.0.0.0 n17cast4au.adobestats.io
+0.0.0.0 hnk7phkxtg.adobestats.io
 #####################################
