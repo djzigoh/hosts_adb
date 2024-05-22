@@ -4,6 +4,7 @@
 0.0.0.0 ardownload.adobe.com
 0.0.0.0 armmf.adobe.com
 #
+# Last update: 2024-05-21 19:45 UTC
 0.0.0.0 ic.adobe.io
 0.0.0.0 cc-api-data.adobe.io
 0.0.0.0 prod.adobegenuine.com
@@ -380,4 +381,10 @@
 0.0.0.0 tld9di3jxu.adobestats.io
 0.0.0.0 xa8g202i4u.adobestats.io
 0.0.0.0 z83qksw5cq.adobestats.io
+0.0.0.0 9mblf9n5zf.adobestats.io
+0.0.0.0 be5d7iw6y1.adobestats.io
+0.0.0.0 cxqenfk6in.adobestats.io
+0.0.0.0 cim9wvs3is.adobestats.io
+0.0.0.0 iqhvrdhql4.adobestats.io
+0.0.0.0 ar1hqm61sk.adobestats.io
 #####################################
