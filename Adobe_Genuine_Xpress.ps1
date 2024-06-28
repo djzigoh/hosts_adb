@@ -1,1 +1,1 @@
-Remove-NetFirewallRule -DisplayName ilu*
+Remove-NetFirewallRule -DisplayName Autodesk*
