@@ -1,5 +1,4 @@
-
-##### BLOCK ADOBE GENUINE HOSTS WITH LOGIN ACCESS #####
+#### BLOCK ADOBE GENUINE HOSTS WITH LOGIN ACCESS #####
 
 0.0.0.0 ic.adobe.io
 0.0.0.0 cc-api-data.adobe.io
@@ -713,4 +712,7 @@
 0.0.0.0 fmbxa3a0yh.adobestats.io
 0.0.0.0 ywwlnskz2q.adobestats.io
 0.0.0.0 a2104gz1mh.adobe.io
+0.0.0.0 0ojupfm51u.adobe.io
+0.0.0.0 4zong3qp04.adobestats.io
+0.0.0.0 giq5q50mql.adobestats.io
 #####################################
