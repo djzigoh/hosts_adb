@@ -2,20 +2,12 @@
 setlocal enabledelayedexpansion
 
 set "URL=https://a.dove.isdumb.one/list.txt"
-set "GITHUB_USERNAME=djzigoh"
-set "GITHUB_REPO_NAME=hosts_adb"
 set "WORKING_DIR=c:\hosts_adb"
-
-cd /d "%WORKING_DIR%"
-
+set "REPLACEMENT_LINE=#### BLOCK ADOBE GENUINE HOSTS WITH LOGIN ACCESS #####"
 set "MONTHS=03 04 05 06 07 08 09 10 11 12"
 
-for %%M in (%MONTHS%) do (
-    powershell -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%%M_2024_adb_block_with_login'"
-)
-
-powershell -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '03_2024_adb_block'"
+powershell -ExecutionPolicy Bypass -File "process_files.ps1" -url "%URL%" -workingDir "%WORKING_DIR%" -replacementLine "%REPLACEMENT_LINE%" -months "%MONTHS%"
 
 git add .
-git commit -m "last" .
+git commit -m "Updated files with new header"
 git push
