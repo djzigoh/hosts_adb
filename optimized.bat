@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 set URL=https://a.dove.isdumb.one/list.txt
 cd /d c:\hosts_adb
-for %%i in (03,04,05,06,07,08,09,10,11,12) do (powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%%i_2024_adb_block_with_login'"; -Command "&" './Remove-FirstSevenLines.ps1' '%%i_2024_adb_block_with_login'" || goto :error
+for %%i in (03,04,05,06,07,08,09,10,11,12) do (powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%%i_2024_adb_block_with_login'"; -Command "& './Remove-FirstSevenLines.ps1'" '%%i_2024_adb_block_with_login'" || goto :error
 )
 powershell -Command "git add .; git commit -m 'Last update'; git push" || goto :error
 goto :success
