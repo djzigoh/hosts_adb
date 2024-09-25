@@ -1,3 +1,0 @@
-param([string]$FilePath)    :: Define input parameter for this function/script (i.e., file path containing lines to remove at the beginning)
-$linesToSkip = 7           :: Set number of lines to skip when processing each downloaded file (currently set to 7)
-(Get-Content -Path $FilePath | Select-Object -Skip $linesToSkip) | Out-File -FilePath $FilePath   :: Overwrite original contents with modified version containing only desired data without any headers or metadata
