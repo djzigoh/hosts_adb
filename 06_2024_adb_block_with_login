@@ -4,7 +4,7 @@
 # These IPs will only block the telemetry check of Adobe
 # apps, and shouldn't interfere with any other network
 # option, such as AI generation, downloads, etc.
-# Last update: 2024-11-16 19:52 UTC
+# Last update: 2024-11-19 16:16 UTC
 0.0.0.0 ic.adobe.io
 0.0.0.0 cc-api-data.adobe.io
 0.0.0.0 cc-api-data-stage.adobe.io
@@ -1031,3 +1031,7 @@
 0.0.0.0 tz8aenh3nl.adobestats.io
 0.0.0.0 bv7iaks1q0.adobestats.io
 0.0.0.0 lmy2aip7t9.adobestats.io
+0.0.0.0 v1p7zr510j.adobestats.io
+0.0.0.0 aw725q3eth.adobestats.io
+0.0.0.0 ltnk9caeyt.adobestats.io
+0.0.0.0 ykcaj6bh15.adobestats.io
