@@ -16,16 +16,19 @@ if %%a==files set files=%%b
 REM Switching to working folder.
 cd /d %local_dir%
 
-REM This section pulls the hosts blocking list from the web and create a copy for each month using a custom filename and a month number prefix.
+REM This section pulls the hosts blocking list from the web and edit the file contents
 powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%temp_list%'"
+powershell -NoProfile -ExecutionPolicy Unrestricted -Command "& './%edit_script%'"
+
+REM This section copy the edited file as 12 files corresponding to each month
+
 for %%i in (01,02,03,04,05,06,07,08,09,10,11,12) do (
 powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Copy-Item -Path '%temp_list%' -Destination "'%%i_2024_adb_block_with_login'"
 )
 del %temp_list%
 
 
-REM This section rewrite the header on all 12 files using a custom string for personalization.
-powershell -NoProfile -ExecutionPolicy Unrestricted -Command "& './%edit_script%'" 
+ 
 
 
 REM This section commit all files to a pre-configured GitHub repository.

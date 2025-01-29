@@ -1,5 +1,4 @@
 @echo off
-
 setlocal enabledelayedexpansion
 
 REM The following section reads all variables from settings.ini
@@ -10,32 +9,27 @@ if %%a==temp_list set temp_list=%%b
 if %%a==edit_script set edit_script=%%b
 if %%a==directory set directory=%%b
 if %%a==files set files=%%b
-
 )
 
 REM Switching to working folder.
 cd /d %local_dir%
 
-REM This section pulls the hosts blocking list from the web and edit the file contents
+REM Pull and edit the file
 powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%temp_list%'"
 powershell -NoProfile -ExecutionPolicy Unrestricted -Command "& './%edit_script%'"
 
-REM This section copy the edited file as 12 files corresponding to each month
-
-for %%i in (01,02,03,04,05,06,07,08,09,10,11,12) do (
-powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Copy-Item -Path '%temp_list%' -Destination "'%%i_2024_adb_block_with_login'"
+REM Generate files for both years
+for %%y in (2024 2025) do (
+    for %%i in (01,02,03,04,05,06,07,08,09,10,11,12) do (
+        powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Copy-Item -Path '%temp_list%' -Destination '%%i_%%y_adb_block_with_login.txt'"
+    )
 )
 del %temp_list%
 
+REM Commit to GitHub
+powershell -Command "git add .; git commit -m 'Added files for 2024-2025'; git push" || goto :error
 
- 
-
-
-REM This section commit all files to a pre-configured GitHub repository.
-powershell -Command "git add .; git commit -m 'Last update'; git push" || goto :error
-
-
-REM This section handles success / error messages with logging if an error occurs .
+REM Handle success/error messages
 goto :success
 :error
 echo An error occurred during script execution. Please check the logs for more details >> errors.log  
