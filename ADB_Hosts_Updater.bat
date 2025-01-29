@@ -21,7 +21,7 @@ powershell -NoProfile -ExecutionPolicy Unrestricted -Command "& './%edit_script%
 REM Generate files for both years
 for %%y in (2024 2025) do (
     for %%i in (01,02,03,04,05,06,07,08,09,10,11,12) do (
-        powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Copy-Item -Path '%temp_list%' -Destination '%%i_%%y_adb_block_with_login.txt'"
+        powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Copy-Item -Path '%temp_list%' -Destination '%%i_%%y_adb_block_with_login'"
     )
 )
 del %temp_list%
