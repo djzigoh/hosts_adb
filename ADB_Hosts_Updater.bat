@@ -24,10 +24,10 @@ for %%y in (2024 2025) do (
         powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Copy-Item -Path '%temp_list%' -Destination '%%i_%%y_adb_block_with_login'"
     )
 )
-xcopy expired.txt 01_2024_adb_block_with_login /S /E /Y
-xcopy expired.txt 02_2024_adb_block_with_login /S /E /Y
-xcopy expired.txt 03_2024_adb_block_with_login /S /E /Y
-xcopy expired.txt 04_2024_adb_block_with_login /S /E /Y
+copy expired.txt 01_2024_adb_block_with_login /Y
+copy expired.txt 02_2024_adb_block_with_login /Y
+copy expired.txt 03_2024_adb_block_with_login /Y
+copy expired.txt 04_2024_adb_block_with_login /Y
 del %temp_list%
 
 REM Commit to GitHub
