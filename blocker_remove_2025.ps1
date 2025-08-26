@@ -1,0 +1,1 @@
+Remove-NetFirewallRule -DisplayName DOBE_BLOCK_2025:*
