@@ -28,6 +28,10 @@ copy expired.txt 01_2024_adb_block_with_login /Y
 copy expired.txt 02_2024_adb_block_with_login /Y
 copy expired.txt 03_2024_adb_block_with_login /Y
 copy expired.txt 04_2024_adb_block_with_login /Y
+copy expired.txt 05_2024_adb_block_with_login /Y
+copy expired.txt 06_2024_adb_block_with_login /Y
+copy expired.txt 07_2024_adb_block_with_login /Y
+copy expired.txt 08_2024_adb_block_with_login /Y
 del %temp_list%
 
 REM Commit to GitHub
