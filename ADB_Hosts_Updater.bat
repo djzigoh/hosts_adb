@@ -1,50 +1,74 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal EnableDelayedExpansion
 
-REM The following section reads all variables from settings.ini
-for /f "tokens=1,2,3,4,5,6 delims==" %%a in (settings.ini) do (
-if %%a==URL set URL=%%b
-if %%a==local_dir set local_dir=%%b
-if %%a==temp_list set temp_list=%%b
-if %%a==edit_script set edit_script=%%b
-if %%a==directory set directory=%%b
-if %%a==files set files=%%b
+REM --- Read variables from settings.ini ---
+for /f "usebackq tokens=1,2 delims==" %%a in ("settings.ini") do (
+    if "%%a"=="URL"         set "URL=%%b"
+    if "%%a"=="local_dir"   set "local_dir=%%b"
+    if "%%a"=="temp_list"   set "temp_list=%%b"
+    if "%%a"=="edit_script" set "edit_script=%%b"
+    if "%%a"=="directory"   set "directory=%%b"
 )
 
-REM Switching to working folder.
-cd /d %local_dir%
+REM --- Configuration ---
+set "ACTIVE_YEARS=2025 2026"
+set "EXPIRED_YEARS=2024"
 
-REM Pull and edit the file
-powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%temp_list%'"
-powershell -NoProfile -ExecutionPolicy Unrestricted -Command "& './%edit_script%'"
+REM Specific month/year exclusions (space-separated tokens: MM_YYYY)
+set "EXPIRED_MONTHS="
+REM Example:
+REM set "EXPIRED_MONTHS=01_2025 02_2025"
 
-REM Generate files for both years
-for %%y in (2024 2025) do (
-    for %%i in (01,02,03,04,05,06,07,08,09,10,11,12) do (
-        powershell -NoProfile -ExecutionPolicy Unrestricted -Command "Copy-Item -Path '%temp_list%' -Destination '%%i_%%y_adb_block_with_login'"
+REM --- Workdir ---
+cd /d "%local_dir%" || goto :error
+
+REM --- Download and edit upstream list ---
+powershell -NoProfile -ExecutionPolicy Bypass -Command ^
+  "Invoke-WebRequest -Uri '%URL%' -OutFile '%temp_list%'" || goto :error
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command ^
+  "& './%edit_script%'" || goto :error
+
+REM --- Expire full years (overwrite all 12 months) ---
+for %%y in (%EXPIRED_YEARS%) do (
+  for %%m in (01 02 03 04 05 06 07 08 09 10 11 12) do (
+    copy /Y "expired.txt" "%%m_%%y_adb_block_with_login" >nul
+  )
+)
+
+REM --- Expire specific months (overwrite only listed tokens) ---
+if defined EXPIRED_MONTHS (
+  for %%e in (%EXPIRED_MONTHS%) do (
+    copy /Y "expired.txt" "%%e_adb_block_with_login" >nul
+  )
+)
+
+REM --- Generate active years, skipping expired months ---
+for %%y in (%ACTIVE_YEARS%) do (
+  for %%m in (01 02 03 04 05 06 07 08 09 10 11 12) do (
+
+    set "SKIP=0"
+    if defined EXPIRED_MONTHS (
+      for %%e in (%EXPIRED_MONTHS%) do (
+        if "%%e"=="%%m_%%y" set "SKIP=1"
+      )
     )
+
+    if "!SKIP!"=="0" (
+      powershell -NoProfile -ExecutionPolicy Bypass -Command ^
+        "Copy-Item -Path '%temp_list%' -Destination '%%m_%%y_adb_block_with_login' -Force" || goto :error
+    )
+  )
 )
-copy expired.txt 01_2024_adb_block_with_login /Y
-copy expired.txt 02_2024_adb_block_with_login /Y
-copy expired.txt 03_2024_adb_block_with_login /Y
-copy expired.txt 04_2024_adb_block_with_login /Y
-copy expired.txt 05_2024_adb_block_with_login /Y
-copy expired.txt 06_2024_adb_block_with_login /Y
-copy expired.txt 07_2024_adb_block_with_login /Y
-copy expired.txt 08_2024_adb_block_with_login /Y
-copy expired.txt 09_2024_adb_block_with_login /Y
-copy expired.txt 10_2024_adb_block_with_login /Y
-copy expired.txt 11_2024_adb_block_with_login /Y
-copy expired.txt 12_2024_adb_block_with_login /Y
-del %temp_list%
 
-REM Commit to GitHub
-powershell -Command "git add .; git commit -m 'Added files for 2024-2025'; git push" || goto :error
+del "%temp_list%" >nul 2>&1
 
-REM Handle success/error messages
-goto :success
-:error
-echo An error occurred during script execution. Please check the logs for more details >> errors.log  
-exit /b %ERRORLEVEL%                 
-:success
+REM --- Git commit/push (same behavior as your original idea) ---
+powershell -Command "git add .; git commit -m 'Updated files for 2025-2026'; git push" || goto :error
+
 echo Script executed successfully!
+exit /b 0
+
+:error
+echo An error occurred during script execution. Please check the logs for more details>> errors.log
+exit /b 1
